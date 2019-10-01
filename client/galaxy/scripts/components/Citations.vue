@@ -50,7 +50,9 @@
       <b-collapse
         :id="id"
         class="mt-2"
+        @show='$emit("show")'
         @shown='$emit("shown")'
+        @hide='$emit("hide")'
         @hidden='$emit("hidden")'
       >
         <b-card>
