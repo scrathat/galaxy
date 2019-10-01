@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ["eslint:recommended", "plugin:vue/essential"], // airbnb-base, eventually
+    extends: ['airbnb-base', 'plugin:vue/recommended', 'prettier', 'prettier/vue'],
     env: {
         browser: true,
         commonjs: true,
@@ -8,14 +8,17 @@ module.exports = {
         mocha: true
     },
     parserOptions: {
-        parser: "babel-eslint",
-        sourceType: "module"
+        parser: 'babel-eslint',
+        sourceType: 'module'
     },
-    plugins: ["html"],
+    plugins: ['prettier', 'vue'],
     rules: {
-        "no-console": "off",
-        "no-unused-vars": ["error", { args: "none" }],
-        "prefer-const": "error",
+        'import/no-unresolved': 'off',
+        'vue/no-v-html': 'off',
+        'no-console': 'off',
+        'no-unused-vars': ['error', { args: 'none' }],
+        'prefer-const': 'error',
+        'prettier/prettier': 'error'
         // I'd love to turn on camelcase, but it's a big shift with tons of current errors.
         // camelcase: [
         //     "error",
