@@ -43,6 +43,6 @@ if [[ -n $EXIT_CODE && $EXIT_CODE != 124 ]]; then
 else
 	MESSAGE="Timout starting galaxy instance"
 	echo "$MESSAGE"
-	which osascript 2>&1 >/dev/null && osascript -e 'display notification "$MESSAGE" with title "Galaxy timeout"'
+	which osascript 2>&1 >/dev/null && osascript -e "display notification \"$MESSAGE\" with title \"Galaxy timeout\""
 	tmux attach -t "$SESSION_NAME"
 fi
