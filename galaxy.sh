@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Requirements
-# tmux, stdbuf, bash/zsh, awk
+# bash/zsh, tmux, timeout, stdbuf, awk
 
 TIMEOUT="${1:-2m}" # 2 min timeout by default if no arg is given
 GALAXY_DIR="/path/to/galaxy"
